@@ -1,0 +1,163 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+}
+.loading-form-wrapper {
+	margin: 0 auto;
+	height: 100vh;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #6F4A84;
+	color: #fff;
+}
+#loading-form {
+	max-width: 500px;
+	width: 100%;
+	min-height: 500px;
+	padding: 15px;
+}
+#name {
+	width: 80%;
+	margin: 15px 5px;
+	padding: 5px;
+}
+#submit-btn {
+	width: 100%;
+	margin: 0;
+	padding: 10px 5px;
+	background-color: #B09ABB;
+	cursor: pointer;
+	color: #fff;
+	border: none;
+	text-transform: uppercase;
+	transition: 0.3s ease;
+}
+#submit-btn:hover {
+	background-color: #562E6C;
+}
+
+.game-wrapper {
+	background-color: #6F4A84;
+	height: 100vh;
+	color: #fff;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+.game-wrapper h2 {
+	margin: 0;
+	margin-bottom: 20px;
+}
+.game-column {
+	width: 25%;
+	padding: 50px 0;
+	background-color: #5D5088;
+}
+.turns-column {
+	background-color: inherit;
+	width: 35%;
+	overflow-y: auto;
+}
+.turns {
+	list-style-type: none;
+	padding: 0;
+	margin: 0 15px;
+}
+.player-turn {
+	background-color: #1A661F;
+}
+.monster-turn {
+	background-color: #B91F17;
+}
+.turns li {
+	margin: 15px 0;
+	padding: 15px;
+}
+.health-wrapper {
+	background-color: #fff;
+}
+.health {
+	height: 25px;
+	padding: 5px 0;
+	margin-bottom: 20px;
+	transition: 0.3s ease;
+}
+.targets-wrapper {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 20px;
+}
+.targets-column {
+	width: 35%;
+}
+.target-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px;
+	width: 100%;
+	position: relative;
+	margin: 15px 0;
+}
+.target-item label {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	text-align: left;
+	position: relative;
+	z-index: 9;
+	font-size: 18px;
+}
+input[type=radio] {
+	position: absolute;
+	visibility: hidden;
+}
+.check {
+	width: 30px;
+	height: 30px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 5;
+	right: 0;
+}
+.check:before {
+	display: block;
+	content: '';
+	position: absolute;
+	border-radius: 50%;
+	height: 15px;
+	width: 15px;
+	top: 5px;
+	left: 5px;
+}
+input[type=radio]:checked ~ .check:before {
+	background-color: #fff;
+}
+.btn-attack {
+	width: 50px;
+	height: 50px;
+	margin: 0 15px;
+	cursor: pointer;
+	background-color: #fff;
+	border: none;
+	outline: none;
+	background-image: url(../sword.svg);
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+.newgame-btn {
+	background-color: #fff;
+	border: none;
+	padding: 15px;
+	cursor: pointer;
+	font-size: 18px;
+}
+.error {
+	padding: 15px;
+	font-size: 18px;
+	background-color: #B91F17;
+}
